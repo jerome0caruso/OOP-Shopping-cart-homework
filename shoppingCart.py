@@ -4,14 +4,18 @@ class Build():
 
     def addItem(self, add):
         if add not in self.cart:
-            self.cart.append(add)
             print(f"{add} has been added to the Cart!")
+            return self.cart.append(add)
         else:
             print("This item is already in the cart...")
     def showItem(self):
         print("Items in your cart:")
         for s in self.cart:
             print(s)
+        if len(self.cart) > 0:    
+            return "End of cart." 
+        else:
+            return "Nothing in the cart."     
 
     def deleteItem(self, dele):
         if dele in self.cart:
@@ -36,7 +40,6 @@ def cart_Logic():
         if user_input == 'add':
             my_item = input("Enter an item to add to your cart: ")
             cart_1.addItem(my_item)
-
         if user_input == 'delete':
             my_item = input("Enter an item to delete from your cart: ")
             cart_1.deleteItem(my_item)
@@ -45,4 +48,4 @@ def cart_Logic():
             print("Cart has been cleared!")
 
 
-cart_Logic()
+cart_1 = cart_Logic()
