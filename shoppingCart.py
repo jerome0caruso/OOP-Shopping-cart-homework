@@ -48,4 +48,4 @@ def cart_Logic():
             print("Cart has been cleared!")
 
 
-cart_1 = cart_Logic()
+cart = cart_Logic()
